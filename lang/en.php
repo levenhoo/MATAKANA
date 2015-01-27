@@ -1,6 +1,8 @@
 <?php
 
 $lang =array();
+$lang['website-title'] = 'MATAKANA OA SYSTEM';
+$lang['system-name'] = 'MATAKANA';
 
 $lang['form-field-member-form-xxxx'] = 'yy';
 $lang['form-field-member-form-xxxx-placeholder'] = 'yy'; 
@@ -24,3 +26,9 @@ $lang['form-field-member-form-sequence'] = 'Sequence';
 $lang['form-field-member-form-sequence-placeholder'] = '';
 $lang['form-field-member-form-xxxx'] = 'yy';
 $lang['form-field-member-form-xxxx-placeholder'] = 'yy';
+
+$lang['table-field-member-table-name'] = 'Name';
+$lang['table-field-member-table-phone'] = 'Phone';
+$lang['table-field-member-table-ename'] = 'Ename';
+$lang['table-field-member-table-dayofbirth'] = 'Day of birth';
+$lang['table-field-member-table-contact'] = 'Contact';

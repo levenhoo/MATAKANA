@@ -1,6 +1,8 @@
 <?php
 
-$lang =array(); 
+$lang =array();
+$lang['website-title'] = '马纳办公系统';
+$lang['system-name'] = '马纳';
 
 $lang['form-field-member-form-xxxx'] = 'yy';
 $lang['form-field-member-form-xxxx-placeholder'] = 'yy'; 
@@ -22,8 +24,14 @@ $lang['form-field-member-form-memo'] = '备注说明';
 $lang['form-field-member-form-memo-placeholder'] = '备注说明';
 $lang['form-field-member-form-sequence'] = '排序';
 $lang['form-field-member-form-sequence-placeholder'] = '排序';
-$lang['form-field-member-form-xxxx'] = 'yy';
-$lang['form-field-member-form-xxxx-placeholder'] = 'yy';
+
+
+$lang['table-field-member-table-name'] = '姓名';
+$lang['table-field-member-table-phone'] = '联系电话';
+$lang['table-field-member-table-ename'] = '英文名';
+$lang['table-field-member-table-dayofbirth'] = '生日';
+$lang['table-field-member-table-contact'] = '联系人';
+
   
  
  

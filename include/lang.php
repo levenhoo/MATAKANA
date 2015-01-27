@@ -4,15 +4,15 @@
     {   
       switch ($_GET['lang']) {
         case 'cn':
-           include("include/cn.php");
+           include("lang/cn.php");
           break;
         case 'en':
-           include("include/en.php");
+           include("lang/en.php");
           break;
         default:
-           include("include/cn.php");
+           include("lang/en.php");
           break;
       } 
     }
 else 
-   include("include/cn.php");
+   include("lang/en.php");
