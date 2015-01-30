@@ -3,6 +3,10 @@
 $lang =array();
 $lang['website-title'] = '马纳办公系统';
 $lang['system-name'] = '马纳';
+$lang['menu-nav-logout'] = '退出';
+$lang['menu-nav-home'] = '首页';
+$lang['menu-nav-member'] = '会员';
+$lang['menu-nav-member-list'] = '会员列表';
 
 $lang['form-field-member-form-xxxx'] = 'yy';
 $lang['form-field-member-form-xxxx-placeholder'] = 'yy'; 

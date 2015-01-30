@@ -4,6 +4,11 @@ $lang =array();
 $lang['website-title'] = 'MATAKANA OA SYSTEM';
 $lang['system-name'] = 'MATAKANA';
 
+$lang['menu-nav-logout'] = 'Logout';
+$lang['menu-nav-home'] = 'Home';
+$lang['menu-nav-member'] = 'Member';
+$lang['menu-nav-member-list'] = 'Member List';
+
 $lang['form-field-member-form-xxxx'] = 'yy';
 $lang['form-field-member-form-xxxx-placeholder'] = 'yy'; 
 $lang['form-field-member-form-name'] = 'name';
