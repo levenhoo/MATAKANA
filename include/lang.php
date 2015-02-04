@@ -13,7 +13,7 @@
       break;
     default:
       $_SESSION["LANG"] = "en";
-       include("lang/en.php");
+       include("lang/cn.php");
       break;
   }
 }
@@ -24,5 +24,5 @@ else {
      include("lang/".$_SESSION["LANG"].".php");
    }
    else
-    include("lang/en.php");
+    include("lang/cn.php");
 }

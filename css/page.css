@@ -32,31 +32,36 @@ body{color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.5);}
 #pagination .active a{color:#a7301f;}
 #pagination #maxpage{color:#000;}
 .table td,.table th{font-size:12px;}
-.loginhead{padding:0;}
-.loginbody{padding:50px;}
-.loginfoot{padding:0;text-align:center;}
-.inner-form{display:none;margin-top:150px;margin-right:auto;margin-left:auto;width:300px;}
-.btn{margin:20px;min-width:70px;}
-.loginbody{height:600px;background:url("../images/impression.png") no-repeat;}
-.text_success{position:absolute;top:50%;left:50%;z-index:50;display:none;margin:0 0 35px 0;margin-top:-0px;margin-left:-100px;padding:20px 0;width:200px;text-align:center;font-size:14px;line-height:25px;}
-.table-top .button-group{ }
-.table-top{clear:both;}
-.text_success span{padding:10px;color:#555;}
-.loginfoot{width:100%;}
-.table-v{ margin-top: 20px;}
 
+/*login*/
+.loginhead{padding:0;}
+.loginbody{ padding:50px; height:600px;background:url("../images/impression.png") no-repeat;}
+.loginfoot{padding:0;text-align:center;width:100%;}
+
+.inner-form{display:none;margin-top:150px;margin-right:auto;margin-left:auto;width:300px;}
+.btn{margin:20px;min-width:70px;  }
+.btn-default {color: #333;}
+.btn-primary {color:#fff;}
+.text_success{position:absolute;top:50%;left:50%;z-index:50;display:none;margin:0 0 35px 0;margin-top:-0px;margin-left:-100px;padding:20px 0;width:200px;text-align:center;font-size:14px;line-height:25px;}
+.text_success span{padding:10px;color:#555;}
+
+.table-top .button-group{ }
+.table-top{ clear:both; }
+.table-v{ margin-top: 20px;}
 .main-body{ padding: 10px;margin-top: 10px; }
 .foot{ width: 100%; text-align: center; bottom: 0; position: fixed;  }
-#report{ width: 48%; float: left; margin-right: 20px ; }
-#pie-report {width: 48%;}
+.charts{ margin: 0px 10px 10px 10px;  width: 48%; float: left;}
 .tab-pane {padding-top: 10px;}
 .button-bar{ text-align: center; width: 100%; }
+.error{ color: #d81b0a; }
+.under { text-decoration-line:underline !important; }
 body{ text-shadow:none !important; }
-@media(max-width:768px){.text_success{margin-top:-150px;}
+@media(max-width:768px){
+    .text_success{margin-top:-150px;}
     .inner-form{margin-top:70px;}
     .loginbody{margin-top:10px;}
-    #report{ width: 90%;  float: none;margin-bottom: 20px; }
-    #pie-report {width: 90%;}
+    .charts{ width: 95%; float: none;}
+    .foot {position: relative;}
 }
 @media(max-width:480px){.text_success{margin-top:-70px;}
     .inner-form{margin-top:20px;width:200px;}
@@ -65,6 +70,7 @@ body{ text-shadow:none !important; }
     .loginfoot{position:fixed;bottom:10;}
     .text_success span{color:#ccc;}
     .max-page{display:none;}
+    .foot {position: relative;}
    /* .nav{ display: none; }*/
 }
 

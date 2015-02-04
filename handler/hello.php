@@ -1,6 +1,4 @@
-<!--<script> alert( 'hello world');</script>-->
 <?php
-
 include("../include/medoo.php");
 include("../include/database.php");
 
@@ -10,13 +8,11 @@ if( isset($ids) ){
   $hh->d($ids);
   exit;
 }
-print_r( $_POST);
 if( isset($_POST["dataid"]) ){
   $hh = new hello($database_setting);
   $hh->iu($_POST);
   exit;
 }
-
 
 class hello {
   private $database_setting = array();
@@ -30,7 +26,7 @@ class hello {
     $where["member_id"] = $arr;
     $result = $database->delete('member',$where);
     if($result){
-      print "result ". $result;
+      //print "result ". $result;
       print "<script>location.href=\"/member-list.php\"</script>";
     }
   }
@@ -42,12 +38,11 @@ class hello {
       unset($arr["dataid"]);
       $result = $database->update('member',$arr,$where);
       if($result){
-        print "result ". $result;
-        //setTimeout("alert('对不起, 要你久候')",5000);
         print "<script>location.href=\"/member-list.php\"</script>";
       }
     }else{
       unset($arr["dataid"]);
+      $arr["createtime"] = date("Y-m-d H:i:s");
       $result = $database->insert('member',$arr);
       if($result){
         print "<script>location.href=\"/member-list.php\"</script>";

@@ -12,7 +12,7 @@ include("include/lang.php");
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <?php include("include/script.inc"); ?>
   <link href="css/page.css" rel="stylesheet">
-  <script type="text/javascript" src="js/highcharts.js"></script>
+  <script type="text/javascript" src="js/Highcharts/highcharts.js"></script>
 </head>
 <body>
       <!--header-->
@@ -24,8 +24,9 @@ include("include/lang.php");
         <p class="lead"><a href="#" class="btn btn-lg btn-default">Learn more</a></p>
       </div>-->
       <div class="main-body">
-      <div id="report"></div>
-        <div id="pie-report"></div>
+
+        <div class="charts" id="report"></div>
+        <div class="charts" id="pie-report"></div>
       </div>      <!--foot-->
       <?php include("com/foot.php"); ?>
       <script type="text/javascript">

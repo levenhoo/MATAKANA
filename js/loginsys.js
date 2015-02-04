@@ -99,6 +99,9 @@ function submitcheck() {
             }
             else if (result== "2") {
                 setTimeout("Login()", 500);
+            }
+            else if (result== "3") {
+                showError("帐号已经被停用");
             }else{
                 showError("请与管理员联系");
             }
@@ -109,6 +112,7 @@ function submitcheck() {
 $(document).ready(function () { 
     begin();
     $("#submit-form").click(function () {
+        $('#alert-info').hide();
         submitcheck();
     });
 });
