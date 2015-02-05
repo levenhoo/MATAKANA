@@ -2,8 +2,21 @@
     <li class="active"><a href="/index.php"><?php print $lang['menu-nav-home']; ?></a></li>
     <li><a href="member-list.php"><?php print $lang['menu-nav-member-list']; ?></a></li>
     <?php if($_SESSION["LOGIN_ROLE"]==1): ?>
-    <li><a href="user-list.php"><?php print $lang['menu-nav-user-list']; ?></a></li>
+
+
+
+    <li role="presentation" class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+        <?php print $lang['system']; ?> <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu" role="menu">
+        <li role="presentation" class="divider"></li>
+        <li><a href="user-list.php"><?php print $lang['menu-nav-user-list']; ?></a></li>
+        <li><a href="loginlog.php"><?php print $lang['menu-nav-loginlog']; ?></a></li>
+      </ul>
+    </li>
     <?php endif; ?>
+
     <li role="presentation" class="dropdown">
       <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
         <?php print $lang['account']; ?> <span class="caret"></span>

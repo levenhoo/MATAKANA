@@ -93,17 +93,15 @@ function submitcheck() {
         url: "loginsys.php?number=" + number,
         data: $("#login-form").serializeArray(),
         success: function (result) {
-            if (result== "1") {
-                showError("帐号或者密码错误");
-                //changecode();
-            }
-            else if (result== "2") {
-                setTimeout("Login()", 500);
-            }
-            else if (result== "3") {
-                showError("帐号已经被停用");
-            }else{
-                showError("请与管理员联系");
+            switch(result){
+                case "1": setTimeout("Login()", 500);  alert(result); break;
+                case "2": showError("帐号或者密码错误"); break;
+                case "3": showError("帐号已经被停用"); break;
+                case "4": showError("请与管理员联系");break;
+                case "5": showError("帐号已经被锁定，请通知管理员");break;
+                case "6": showError("已经被禁止登录系统");break;
+                case "7": showError("没有授权登录系统");break;
+                default: showError("未知错误"); break;
             }
         }
     });

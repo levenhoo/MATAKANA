@@ -8,6 +8,8 @@ $lang['menu-nav-home'] = '首页';
 $lang['menu-nav-member'] = '会员';
 $lang['menu-nav-member-list'] = '会员列表';
 $lang['menu-nav-user-list'] = '用户列表';
+$lang['menu-nav-loginlog'] = '登陆记录';
+
 $lang['form-field-member-form-xxxx'] = 'yy';
 $lang['form-field-member-form-xxxx-placeholder'] = 'yy'; 
 $lang['form-field-member-form-name'] = '姓名';
@@ -37,7 +39,7 @@ $lang['account-field-mail-setting'] = '邮箱设置';
 $lang['account-field-password'] = '修改密码';
 $lang['account-field-aaaa'] = '@@';
 
-
+$lang['system'] = '系统';
 
 $lang['form-field-user-form-##'] = '@@';
 $lang['form-field-user-form-##'] = '@@';
@@ -77,3 +79,7 @@ $lang['table-field-user-table-newuser'] = '新用户';
 $lang['table-field-user-table-delete'] = '删除';
 $lang['table-field-user-table-action'] = '操作';
 
+$lang['table-field-loginlog-table-loginname'] = '帐号';
+$lang['table-field-loginlog-table-loginip'] = 'IP地址';
+$lang['table-field-loginlog-table-loginresult'] = '结果';
+$lang['table-field-loginlog-table-logintime'] = '登陆时间';
