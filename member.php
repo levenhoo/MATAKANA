@@ -120,7 +120,7 @@ $database = new medoo($database_setting);
             </div>
             <div class="button-bar">
               <button type="submit"  id="submit" class="btn btn-primary">提交</button>
-              <button onclick="javascript:history.go(-1)" type="button"  id="return" class="btn ">返回</button>
+              <button onclick="javascript:history.go(-1)" type="button"  id="return" class="btn btn-default">返回</button>
             </div>
         </form>
 

@@ -36,7 +36,7 @@ $database = new medoo($database_setting);
     </div>
 
     <div class="btn-div">
-    <button type="button" id="submit-form" class="btn btn-primary">Primary</button>
+    <button type="button" id="submit-form" class="btn btn-primary">Login</button>
     <button type="button" id="cancel-form" class="btn btn-default">Cancel</button>
     </div>
     </form>

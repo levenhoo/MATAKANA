@@ -94,7 +94,7 @@ function submitcheck() {
         data: $("#login-form").serializeArray(),
         success: function (result) {
             switch(result){
-                case "1": setTimeout("Login()", 500);  alert(result); break;
+                case "1": setTimeout("Login()", 500);  break;
                 case "2": showError("帐号或者密码错误"); break;
                 case "3": showError("帐号已经被停用"); break;
                 case "4": showError("请与管理员联系");break;

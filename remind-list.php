@@ -22,14 +22,11 @@ $database = new medoo($database_setting);
         $page = isset( $_REQUEST['page'] ) ? $_REQUEST['page'] : 1 ;
         $maxpage = isset( $_REQUEST['maxpage'] ) ? $_REQUEST['maxpage'] : 10 ;
         $where = array();
-        $count = $database->count('member');
+        $count = $database->count('remind');
         $where["LIMIT"] = array( ($page - 1) * $maxpage ,$maxpage);
-        $where["ORDER"] = "member_sequence ASC";
-
-        $result_data = $database->select("member","*",$where);
+        $where["ORDER"] = "id ASC";
+        $result_data = $database->select("remind","*",$where);
         ?>
-
-
         <div class="table-top clear">
           <div class="button-group">
 
@@ -39,12 +36,10 @@ $database = new medoo($database_setting);
                 <span class="caret"></span>
               </button>
               <ul class="dropdown-menu  dropdown-menu-left" role="menu" aria-labelledby="dropdownMenu1">
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="member.php"><?php print $lang['table-field-member-table-newmember']; ?></a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="remind.php"><?php print $lang['table-field-remind-table-newremind']; ?></a></li>
                 <li role="presentation"><a role="menuitem" tabindex="-1" href="#" id="excel"><?php print $lang['excel']; ?></a></li>
                 <li role="presentation"><a role="menuitem" tabindex="-1" title="delete" href="#"><?php print $lang['table-field-member-table-delete']; ?></a></li>
-
-
-              </ul>
+            </ul>
             </div>
 
           </div>
@@ -53,24 +48,22 @@ $database = new medoo($database_setting);
           <thead>
           <tr>
             <th style="width:25px" class="center"><input name="ckall" type="checkbox" /></th>
-            <th><?php print $lang['table-field-member-table-sequence']; ?></th>
-            <th><?php print $lang['table-field-member-table-name']; ?></th>
-            <th><?php print $lang['table-field-member-table-ename']; ?></th>
-            <th><?php print $lang['table-field-member-table-phone']; ?></th>
-            <th><?php print $lang['table-field-member-table-contact']; ?></th>
+            <th><?php print $lang['table-field-remind-table-title']; ?></th>
+            <th><?php print $lang['table-field-remind-table-finishdate']; ?></th>
+            <th><?php print $lang['table-field-remind-table-memo']; ?></th>
+            <th><?php print $lang['table-field-remind-table-createtime']; ?></th>
+
           </tr>
           </thead>
           <tbody>
 
           <?php if($result_data) foreach($result_data as $table_row): ?>
             <tr>
-              <td class='center'><label><input name="ck" alt="<?php echo $table_row["member_id"] ?>" type='checkbox' /><span class="lbl"></span></label></td>
-              <td class="text-uppercase"><?php echo $table_row["member_sequence"] ?></td>
-              <td><a href="member.php?dataid=<?php echo $table_row["member_id"] ?>"><?php echo $table_row["member_name"] ?></a></td>
-              <td><?php echo $table_row["member_ename"] ?></td>
-
-              <td><?php echo $table_row["member_phone"] ?></td>
-              <td><?php echo $table_row["member_contact"] ?></td>
+              <td class='center'><label><input name="ck" alt="<?php echo $table_row["id"] ?>" type='checkbox' /><span class="lbl"></span></label></td>
+              <td><a href="remind.php?dataid=<?php echo $table_row["id"] ?>"><?php echo $table_row["title"] ?></a></td>
+              <td><?php echo $table_row["finishdate"] ?></td>
+              <td><?php echo $table_row["memo"] ?></td>
+              <td><?php echo $table_row["status"] ?></td>
             </tr>
           <?php endforeach; ?>
           </tbody>
@@ -83,9 +76,8 @@ $database = new medoo($database_setting);
 
         <script>
 
-          $("[title=load]").click( function() {
-            $("#submitdata").load("../com/member.php" );
-          });
+
+
           $("[title=delete]").click( function() {
             var ids = "";
             $("[name=ck]").each(function(i){
@@ -97,7 +89,7 @@ $database = new medoo($database_setting);
               }
             });
             if(ids!="" && confirm("are you sure datele date")){
-              $("#submitdata").load("../handler/hello.php", {"ids":ids }   );
+              $("#submitdata").load("../handler/remind.php", {"ids":ids }   );
             }
           });
 
@@ -105,7 +97,7 @@ $database = new medoo($database_setting);
             ActionForm.submit();
           });
           $("#excel").click( function() {
-            $('#ActionForm').attr('action','excel/excel-member.php');
+            $('#ActionForm').attr('action','excel/excel-remind.php');
             ActionForm.submit();
             $('#ActionForm').attr('action','');
           });

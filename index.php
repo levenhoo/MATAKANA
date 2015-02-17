@@ -13,6 +13,7 @@ include("include/lang.php");
   <?php include("include/script.inc"); ?>
   <link href="css/page.css" rel="stylesheet">
   <script type="text/javascript" src="js/Highcharts/highcharts.js"></script>
+  <script type="text/javascript" src="js/Highcharts/modules/exporting.js"></script>
 </head>
 <body>
       <!--header-->
@@ -64,9 +65,9 @@ include("include/lang.php");
       }
       },
       tooltip: {
-      headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+      headerFormat: '<span style="min-width:200px; display: block; font-size:10px">{point.key}</span><table>',
         pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-          '<td style="padding:0"><b>{point.y:.1f} 人</b></td></tr>',
+          '<td style="color:#000; padding:0"><b>{point.y:.1f} 人</b></td></tr>',
         footerFormat: '</table>',
       shared: true,
       useHTML: true

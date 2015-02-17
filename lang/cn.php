@@ -6,6 +6,7 @@ $lang['system-name'] = '马纳';
 $lang['menu-nav-logout'] = '退出';
 $lang['menu-nav-home'] = '首页';
 $lang['menu-nav-member'] = '会员';
+$lang['menu-nav-remind-list'] = '工作';
 $lang['menu-nav-member-list'] = '会员列表';
 $lang['menu-nav-user-list'] = '用户列表';
 $lang['menu-nav-loginlog'] = '登陆记录';
@@ -40,6 +41,7 @@ $lang['account-field-password'] = '修改密码';
 $lang['account-field-aaaa'] = '@@';
 
 $lang['system'] = '系统';
+$lang['excel'] = '导出';
 
 $lang['form-field-user-form-##'] = '@@';
 $lang['form-field-user-form-##'] = '@@';
@@ -83,3 +85,10 @@ $lang['table-field-loginlog-table-loginname'] = '帐号';
 $lang['table-field-loginlog-table-loginip'] = 'IP地址';
 $lang['table-field-loginlog-table-loginresult'] = '结果';
 $lang['table-field-loginlog-table-logintime'] = '登陆时间';
+
+$lang['table-field-remind-table-title'] = '标题';
+$lang['table-field-remind-table-memo'] = '备注';
+$lang['table-field-remind-table-finishdate'] = '结束时间';
+$lang['table-field-remind-table-createtime'] = '创建时间';
+$lang['table-field-remind-table-status'] = '状态';
+$lang['table-field-remind-table-newremind'] = '新工作';

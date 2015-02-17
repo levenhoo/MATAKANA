@@ -1,16 +1,15 @@
   <ul class="nav navbar-nav">
     <li class="active"><a href="/index.php"><?php print $lang['menu-nav-home']; ?></a></li>
     <li><a href="member-list.php"><?php print $lang['menu-nav-member-list']; ?></a></li>
+    <li><a href="remind-list.php"><?php print $lang['menu-nav-remind-list']; ?></a></li>
     <?php if($_SESSION["LOGIN_ROLE"]==1): ?>
-
-
-
     <li role="presentation" class="dropdown">
       <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
         <?php print $lang['system']; ?> <span class="caret"></span>
       </a>
       <ul class="dropdown-menu" role="menu">
         <li role="presentation" class="divider"></li>
+        <li><a href="sendmail.php">send mail</a></li>
         <li><a href="user-list.php"><?php print $lang['menu-nav-user-list']; ?></a></li>
         <li><a href="loginlog.php"><?php print $lang['menu-nav-loginlog']; ?></a></li>
       </ul>
@@ -22,7 +21,7 @@
         <?php print $lang['account']; ?> <span class="caret"></span>
       </a>
       <ul class="dropdown-menu" role="menu">
-        <li><a href="#" onclick="javascript:qqform.submit();" <?php print $lang['account-field-mail']; ?></a></li>
+        <li><a href="#" onclick="javascript:qqform.submit();"> <?php print $lang['account-field-mail']; ?></a></li>
         <li role="presentation" class="divider"></li>
         <li><a href="password.php"><?php print $lang['account-field-mail-setting']; ?></a></li>
         <li><a href="mail.php"><?php print $lang['account-field-password']; ?></a></li>
